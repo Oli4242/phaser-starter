@@ -2,8 +2,8 @@
 My [Phaser.io](https://phaser.io) boilerplate / starter project.
 
 What's inside:
-* [Phaser CE 2.7.3](https://www.phaser.io) (without ninja, p2, creature)
-* [Phaser Behavior Plugin](https://github.com/luizbills/phaser-behavior-plugin)
+* [Phaser CE 2.8.0](https://www.phaser.io) (without ninja, p2, creature)
+* [Phaser Behavior Plugin 1.1.0](https://github.com/luizbills/phaser-behavior-plugin)
 * [Phaser Inspector](https://github.com/netcell/phaser-inspector)
 * ES2016 ([Babel](https://babeljs.io))
 * Build System & dev server ([Broccoli](http://broccolijs.com) / [Browserify](http://browserify.org/))
