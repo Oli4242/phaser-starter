@@ -4,33 +4,29 @@ const Controllable = {
     right: Phaser.KeyCode.RIGHT,
     up:    Phaser.KeyCode.UP,
     down:  Phaser.KeyCode.DOWN,
-    speed: 1
+    speed: 200
   },
 
   create(object, options) {
-    this.updateKeys(object.game, options)
-    this.motion = new Phaser.Point()
+    const keyboard = object.game.input.keyboard
+    options._keys = {
+      left:  keyboard.addKey(options.left),
+      right: keyboard.addKey(options.right),
+      up:    keyboard.addKey(options.up),
+      down:  keyboard.addKey(options.down)
+    }
   },
 
   update(object, options) {
-    this.motion.setTo(0, 0)
+    const keys     = options._keys
+    const velocity = object.body.velocity
 
-    if (this.left.isDown) this.motion.x = -options.speed
-    if (this.right.isDown) this.motion.x = options.speed
-    if (this.up.isDown) this.motion.y = -options.speed
-    if (this.down.isDown) this.motion.y = options.speed
+    velocity.setTo(0)
 
-    object.x += this.motion.x
-    object.y += this.motion.y
-  },
-
-  updateKeys(game, options = this.options) {
-    const keyboard = game.input.keyboard
-
-    this.left  = keyboard.addKey(options.left)
-    this.right = keyboard.addKey(options.right)
-    this.up    = keyboard.addKey(options.up)
-    this.down  = keyboard.addKey(options.down)
+    if (keys.left.isDown)  velocity.x = -options.speed
+    if (keys.right.isDown) velocity.x = options.speed
+    if (keys.up.isDown)    velocity.y = -options.speed
+    if (keys.down.isDown)  velocity.y = options.speed
   }
 }
 

@@ -5,9 +5,10 @@ function addUfo(game, x, y) {
   ufo.animations.add('fly').play(10, true)
 
   game.physics.arcade.enable(ufo)
-  game.plugins.behavior.enable(ufo)
+  ufo.body.collideWorldBounds = true
 
-  ufo.behaviors.set('controls', Controllable, { speed: 8 })
+  game.plugins.behavior.enable(ufo)
+  ufo.behaviors.set('controls', Controllable, { speed: 500 })
 
   return ufo
 }
