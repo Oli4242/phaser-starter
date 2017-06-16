@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
-
 body {
   background-color: #000;
   color: #aaa;
-  font-family: 'Press Start 2P', sans-serif !important;
+  font-family: sans-serif !important;
   text-align: center;
 }
 
@@ -18,5 +16,3 @@ a:hover {
   color: #fff;
   text-decoration: underline;
 }
-
-.phaser-inspector-panel { font-size: 0.75em; }
