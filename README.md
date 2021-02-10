@@ -1,12 +1,14 @@
 # Phaser Starter
-My [Phaser.io](https://phaser.io) boilerplate / starter project.
+My Phaser.io template / starter project.
 
-What's inside:
-* [Phaser CE 2.8.0](https://www.phaser.io) (without ninja, p2, creature)
-* [Phaser Behavior Plugin 1.1.0](https://github.com/luizbills/phaser-behavior-plugin)
-* [Phaser Inspector](https://github.com/netcell/phaser-inspector)
-* ES2016 ([Babel](https://babeljs.io))
-* Build System & dev server ([Broccoli](http://broccolijs.com) / [Browserify](http://browserify.org/))
+It features:
+* [Phaser 3](https://phaser.io/)
+* [Babel](https://babeljs.io/)
+* [Webpack 5](https://webpack.js.org/)
+* [Standard JS](https://standardjs.com/)
+* Hashed filenames for nice caching
+* A loading screen
+* An object oriented demo (but nothing is enforced)
 
 ## Install
     $ git clone https://github.com/Oli4242/phaser-starter
@@ -14,8 +16,11 @@ What's inside:
     $ npm install
 
 ## Usage
-| Commands        | Description                               |
-|-----------------|-------------------------------------------|
-| `npm start`     | Start the development server              |
-| `npm run build` | Build the project                         |
-| `npm run clean` | Delete the last build and temporary files |
+| Command              | Description                    |
+|----------------------|--------------------------------|
+| `npm start`          | Alias for `npm run serve`      |
+| `npm run serve`      | Starts the development server  |
+| `npm run build`      | Builds the game                |
+| `npm test`           | Runs StandardJs                |
+| `npm run serve:prod` | Serves the production version  |
+| `npm run build:dev`  | Builds the development version |

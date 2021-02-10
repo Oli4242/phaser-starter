@@ -1,28 +1,29 @@
 {
   "name": "phaser-starter",
-  "version": "0.2.0",
-  "description": "My Phaser.io boilerplate / starter project",
+  "version": "1.0.0",
+  "description": "My Phaser.io template / starter project",
   "scripts": {
-    "start": "broccoli serve",
-    "build": "npm run clean && broccoli build build",
-    "clean": "rimraf build && rimraf tmp",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run serve",
+    "build": "webpack --progress --mode production",
+    "serve": "webpack serve --open --progress --mode development",
+    "build:dev": "webpack --progress --mode development",
+    "serve:prod": "webpack serve --open --progress --mode production",
+    "test": "standard"
   },
   "author": "Oli4242",
   "license": "ISC",
   "devDependencies": {
-    "babel-polyfill": "^6.20.0",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-es2016": "^6.16.0",
-    "babelify": "^7.3.0",
-    "broccoli": "^0.16.9",
-    "broccoli-concat": "^3.0.5",
-    "broccoli-funnel": "^1.1.0",
-    "broccoli-merge-trees": "^1.2.1",
-    "broccoli-stew": "^1.4.0",
-    "broccoli-uglify-sourcemap": "^1.4.2",
-    "broccoli-watchify": "^1.0.1",
-    "rimraf": "^2.5.4",
-    "uglifyify": "^3.0.4"
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "core-js": "^3.8.3",
+    "html-webpack-plugin": "^5.0.0",
+    "phaser": "^3.52.0",
+    "standard": "^16.0.3",
+    "standard-loader": "^7.0.0",
+    "webpack": "^5.21.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }
