@@ -5,7 +5,7 @@ import Bomb from '../assets/bomb.png'
 import Dude from '../assets/dude.png'
 
 export default class Boot extends Phaser.Scene {
-  constructor () { super('Boot') }
+  constructor () { super('Loading') }
 
   preload () {
     this.loadingBar()
