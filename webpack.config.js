@@ -24,7 +24,7 @@ module.exports = function (env, options) {
           enforce: 'pre',
           use: {
             loader: 'standard-loader',
-            options: { error: isProd, globals: 'Phaser' }
+            options: { error: isProd } // globals are defined in package.json
           }
         },
         {
