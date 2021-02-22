@@ -27,3 +27,9 @@ createFactory('player', Player)
 createFactory('score', Score)
 
 new Phaser.Game(config) // eslint-disable-line no-new
+
+/**
+ * @author    Oli4242
+ * @license   {@link https://opensource.org/licenses/0BSD|0BSD}
+ * @see       {@link https://github.com/Oli4242/phaser-starter}
+ */
