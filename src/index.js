@@ -3,7 +3,7 @@ import Phaser from 'phaser/src/phaser-arcade-physics'
 import Loading from './scenes/loading'
 import Play from './scenes/play'
 
-import factoryFor from './utils/factory_for'
+import createFactory from './utils/create_factory'
 import Player from './objects/player'
 import Score from './objects/score'
 
@@ -23,9 +23,7 @@ const config = {
   scene: [Loading, Play]
 }
 
-factoryFor(
-  Player,
-  Score
-)
+createFactory('player', Player)
+createFactory('score', Score)
 
 new Phaser.Game(config) // eslint-disable-line no-new
