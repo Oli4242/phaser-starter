@@ -31,6 +31,8 @@ export default class Play extends Phaser.Scene {
     this.physics.add.collider(this.bombs, platforms)
     this.physics.add.overlap(this.player, this.stars, this.collectStar, null, this)
     this.physics.add.collider(this.player, this.bombs, this.hitBomb, null, this)
+
+    this.input.keyboard.once('keydown-R', () => this.scene.restart())
   }
 
   collectStar (player, star) {

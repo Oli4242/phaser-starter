@@ -5,9 +5,13 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
     scene.physics.world.enableBody(this, Phaser.Physics.Arcade.DYNAMIC_BODY)
     this.setCollideWorldBounds(true)
 
-    scene.sys.events.on('update', this.update, this)
+    scene.events.on('update', this.update, this)
     this.cursors = scene.input.keyboard.createCursorKeys()
     this.dead = false
+  }
+
+  preDestroy () {
+    this.scene.events.off('update', this.update, this)
   }
 
   update () {
